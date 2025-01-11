@@ -1,3 +1,4 @@
+/*body*/
 body {
   width: 800px;
   margin: 0 auto;
@@ -5,9 +6,9 @@ body {
   background-color: #F2F2F2;
 }
 
-// FONT 1: LORA
-// weight: Use a value from 400 to 700
-
+/*FONTS*/
+/*font 1: LORA*/
+/*weight: Use a value from 400 to 700*/
 .lora-regular {
   font-family: "Lora", serif;
   font-optical-sizing: auto;
@@ -15,9 +16,8 @@ body {
   font-style: normal;
 }
 
-// FONT 2: MONTSERRAT
-// weight: Use a value from 100 to 900
-
+/*font 2: MONTSERRAT*/
+/*weight: Use a value from 100 to 900*/
 .montserrat-regular {
   font-family: "Montserrat", serif;
   font-optical-sizing: auto;
@@ -25,6 +25,8 @@ body {
   font-style: normal;
 }
 
+
+/*headings*/
 h1, h2, h3, h4 {
   font-family: montserrat;
 }
@@ -45,18 +47,25 @@ h4{
   font-size: 20px;
 }
 
+/*paragraphs*/
 p {
   font-family:lora;  
   margin-bottom: 20px;
 }
 
+/*lists*/
 li {
   font-family: lora;
 }
 
-
+/*hyperlinks (anchors)*/
 a{
   font-family: lora;
   font-style: italic;
 }
 
+/*for member bio pics*/
+.bio-image {
+  width: 200px;
+  height: auto; /* Maintain aspect ratio */
+}
