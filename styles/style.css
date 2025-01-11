@@ -1,12 +1,14 @@
-html {
-  background-color: #dcf3d0;
+body {
+  width: 800px;
+  margin: 0 auto;
+  padding: 0 20px 20px 20px;
+  background-color: #F2F2F2;
 }
 
 // FONT 1: LORA
-// <uniquifier>: Use a unique and descriptive class name
-// <weight>: Use a value from 400 to 700
+// weight: Use a value from 400 to 700
 
-.lora-normal {
+.lora-regular {
   font-family: "Lora", serif;
   font-optical-sizing: auto;
   font-weight: 400;
@@ -14,26 +16,42 @@ html {
 }
 
 // FONT 2: MONTSERRAT
-// <uniquifier>: Use a unique and descriptive class name
-// <weight>: Use a value from 100 to 900
+// weight: Use a value from 100 to 900
 
-.montserrat-normal {
+.montserrat-regular {
   font-family: "Montserrat", serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
 }
 
-
 h1, h2, h3, h4 {
   font-family: montserrat;
 }
 
+h1 {
+  font-size: 50px;
+}
+
+h2{
+  font-size: 40px;
+}
+
+h3{
+  font-size: 30px;
+}
+
+h4{
+  font-size: 20px;
+}
+
 p {
   font-family:lora;  
+  margin-bottom: 20px;
 }
 
 a{
   font-family: lora;
   font-style: italic;
 }
+
