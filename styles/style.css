@@ -50,6 +50,11 @@ p {
   margin-bottom: 20px;
 }
 
+li {
+  font-family: lora;
+}
+
+
 a{
   font-family: lora;
   font-style: italic;
