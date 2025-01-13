@@ -37,16 +37,26 @@ body {
   position: fixed;
   top: 50px;
   left: 50px;
-  width: calc(100% - 100px); /* Maintain spacing on sides */
-  max-height: calc(100% - 100px); /* Limit height to viewport */
+  width: calc(100% - 100px);
+  max-height: calc(100% - 100px);
   background-color: rgba(255, 255, 255, 0.95);
-  overflow-y: auto; /* Enable scrolling if content overflows */
+  overflow-y: auto;
   z-index: 1000;
   padding: 20px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
   border: 2px solid #333;
   border-radius: 10px;
 }
+
+.step-card {
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.step-card:hover {
+  transform: scale(1.02);
+}
+
 
 .container {
   margin-bottom: 20px; /* Add margin at the bottom of the content */

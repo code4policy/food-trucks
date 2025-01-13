@@ -1,10 +1,10 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const cards = document.querySelectorAll('.card');
+  const stepCards = document.querySelectorAll('.step-card');
   const expandableContent = document.getElementById('expandable-content');
   const expandedContentContainer = document.getElementById('expanded-content-container');
   const closeBtn = document.querySelector('.expandable-content .close-btn');
 
-  // Function to load content dynamically
+  // Function to load card content dynamically
   const loadCardContent = async (url) => {
     try {
       const response = await fetch(url);
@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Show expandable content
   const showExpandableContent = (cardSrc) => {
-    loadCardContent(cardSrc); // Load the specific card content
+    loadCardContent(cardSrc);
     expandableContent.style.display = 'block';
   };
 
@@ -29,8 +29,8 @@ document.addEventListener('DOMContentLoaded', () => {
     expandedContentContainer.innerHTML = ''; // Clear loaded content
   };
 
-  // Add event listeners to cards
-  cards.forEach(card => {
+  // Add event listeners to step cards
+  stepCards.forEach(card => {
     card.addEventListener('click', () => {
       const cardSrc = card.getAttribute('data-card-src'); // Get the HTML file to load
       showExpandableContent(cardSrc);
@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
   document.addEventListener('click', (e) => {
     if (
       !expandableContent.contains(e.target) && // Click is outside the expanded box
-      !Array.from(cards).some(card => card.contains(e.target)) // Click is not on a card
+      !Array.from(stepCards).some(card => card.contains(e.target)) // Click is not on a card
     ) {
       hideExpandableContent();
     }
