@@ -1,12 +1,32 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Demo Website</title>
-    </head>
-    <body>
-        <h1>Our Demonstration Website</h1>
-        <p><a href='to-do/index.html'>I'm in! Tell me what I need to do</a></p>
-        <p><a href='our-team/index.html'>Learn more about our team</a></p>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Main Page</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="main-container">
+    <div class="cards">
+      <div class="card" data-card-src="card_expanded/card_exp1.html">Card 1</div>
+	  <div class="card" data-card-src="card_expanded/card_exp2.html">Card 2</div>
+      <div class="card" data-card-src="card_expanded/card_exp3.html">Card 3</div>
+      <div class="card" data-card-src="card_expanded/card_exp4.html">Card 4</div>
+      <div class="card" data-card-src="card_expanded/card_exp5.html">Card 5</div>
+      <div class="card" data-card-src="card_expanded/card_exp6.html">Card 6</div>
+      <div class="card" data-card-src="card_expanded/card_exp7.html">Card 7</div>
+      <div class="card" data-card-src="card_expanded/card_exp8.html">Card 8</div>
+      <div class="card" data-card-src="card_expanded/card_exp9.html">Card 9</div>
+      <div class="card" data-card-src="card_expanded/card_exp10.html">Card 10</div>
+    </div>
 
-    </body>
+    <!-- Expandable Content -->
+    <div class="expandable-content" id="expandable-content">
+      <div class="close-btn">&times;</div>
+      <div id="expanded-content-container"></div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
 </html>
