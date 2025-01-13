@@ -193,3 +193,32 @@ footer a {
     color: black;
     text-decoration: underline;
 }
+
+.steps-wrapper {
+    width: 100%;
+    overflow-x: auto;  /* Enables horizontal scrolling */
+    padding: 20px 0;
+}
+
+.steps-container {
+    display: inline-flex;  /* Makes cards flow horizontally */
+    gap: 20px;  /* Space between cards */
+    padding: 0 20px;
+    min-width: min-content;  /* Ensures container can grow to fit all cards */
+}
+
+.step-card {
+    width: 245px;  /* Fixed width for each card */
+    height: 450px;
+    flex: 0 0 auto;  /* Prevents cards from shrinking */
+    background: var(--bg-cream);
+    border-radius: 24px;
+    border: 1px solid black;
+    padding: 20px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.step-card:hover {
+    transform: scale(1.02);
+}

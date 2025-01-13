@@ -1,52 +1,75 @@
 document.addEventListener('DOMContentLoaded', () => {
+  const modal = document.getElementById('modal');
+  const modalContent = document.getElementById('modal-content-container');
   const stepCards = document.querySelectorAll('.step-card');
-  const expandableContent = document.getElementById('expandable-content');
-  const expandedContentContainer = document.getElementById('expanded-content-container');
-  const closeBtn = document.querySelector('.expandable-content .close-btn');
+  const closeModal = document.querySelector('.close-modal');
 
-  // Function to load card content dynamically
-  const loadCardContent = async (url) => {
-    try {
-      const response = await fetch(url);
-      if (!response.ok) throw new Error(`Failed to load content from ${url}`);
-      const content = await response.text();
-      expandedContentContainer.innerHTML = content;
-    } catch (error) {
-      console.error('Error loading content:', error);
-      expandedContentContainer.innerHTML = `<p style="color: red;">Failed to load content. Please try again later.</p>`;
-    }
-  };
+  // Add modal styles
+  const modalStyle = document.createElement('style');
+  modalStyle.textContent = `
+      .modal {
+          display: none;
+          position: fixed;
+          z-index: 1000;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          background-color: rgba(0,0,0,0.5);
+      }
 
-  // Show expandable content
-  const showExpandableContent = (cardSrc) => {
-    loadCardContent(cardSrc);
-    expandableContent.style.display = 'block';
-  };
+      .modal-content {
+          background-color: #FFFAF5;
+          margin: 5% auto;
+          padding: 20px;
+          width: 90%;
+          max-width: 1200px;
+          position: relative;
+          max-height: 90vh;
+          overflow-y: auto;
+          border-radius: 10px;
+      }
 
-  // Hide expandable content
-  const hideExpandableContent = () => {
-    expandableContent.style.display = 'none';
-    expandedContentContainer.innerHTML = ''; // Clear loaded content
-  };
+      .close-modal {
+          position: absolute;
+          right: 20px;
+          top: 10px;
+          font-size: 28px;
+          font-weight: bold;
+          cursor: pointer;
+      }
+  `;
+  document.head.appendChild(modalStyle);
 
-  // Add event listeners to step cards
+  // Add click handlers to all cards
   stepCards.forEach(card => {
-    card.addEventListener('click', () => {
-      const cardSrc = card.getAttribute('data-card-src'); // Get the HTML file to load
-      showExpandableContent(cardSrc);
-    });
+      card.addEventListener('click', () => {
+          console.log('Card clicked');
+          const cardSrc = card.getAttribute('data-card-src');
+          console.log('Card src:', cardSrc);
+          
+          fetch(cardSrc)
+              .then(response => response.text())
+              .then(content => {
+                  modalContent.innerHTML = content;
+                  modal.style.display = 'block';
+              })
+              .catch(error => {
+                  console.error('Error loading content:', error);
+                  modalContent.innerHTML = 'Error loading content';
+              });
+      });
   });
 
-  // Add event listener to close button
-  closeBtn.addEventListener('click', hideExpandableContent);
+  // Close modal when clicking X
+  closeModal.addEventListener('click', () => {
+      modal.style.display = 'none';
+  });
 
-  // Hide expandable content when clicking outside the expanded box
-  document.addEventListener('click', (e) => {
-    if (
-      !expandableContent.contains(e.target) && // Click is outside the expanded box
-      !Array.from(stepCards).some(card => card.contains(e.target)) // Click is not on a card
-    ) {
-      hideExpandableContent();
-    }
+  // Close modal when clicking outside
+  window.addEventListener('click', (event) => {
+      if (event.target === modal) {
+          modal.style.display = 'none';
+      }
   });
 });
