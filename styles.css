@@ -168,6 +168,13 @@ body {
   position: relative;
 }
 
+.center-column-card1 {
+    left: 0; /* Moves it to the left edge of its container */
+    width: 100%; 
+   
+     
+}
+
 .task {
   display: flex;
   margin-bottom: 20px;
