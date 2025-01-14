@@ -129,7 +129,7 @@ body {
 
 .content-layout1 {
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 1fr;
   gap: 20px;
 }
 
@@ -189,6 +189,15 @@ body {
   padding-left: 10px;
 }
 
+.task-content1 {
+  border-left: 2px solid black;
+  padding-left: 10px;
+  display: block;         /* Forces single column layout */
+  column-count: 1;        /* Prevents multi-column behavior */
+  width: 100%;           /* Ensures full width */
+}
+
+
 .task-content h3 {
   font-size: 16px;
   font-weight: 700;
@@ -203,6 +212,11 @@ body {
 }
 
 .task-content ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.task-content1 ul {
   list-style-type: disc;
   padding-left: 20px;
 }
