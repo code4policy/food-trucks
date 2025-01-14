@@ -133,6 +133,12 @@ body {
   gap: 20px;
 }
 
+.content-layout8 {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 20px;
+}
+
 .info-box {
   padding: 15px;
   border: 1px solid black;
