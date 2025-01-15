@@ -77,10 +77,11 @@ h1 {
 .intro-text {
     max-width: 1172px;
     margin: 0 auto;
-    text-align: center;
+    text-align: left;
     line-height: 20px;
     font-size: 14px;
     padding: 20px;
+    font-family: 'Lora', serif';
 }
 
 .cost-time {
