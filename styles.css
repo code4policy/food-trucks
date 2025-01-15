@@ -127,6 +127,12 @@ body {
   gap: 20px;
 }
 
+.content-layout1 {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+}
+
 .info-box {
   padding: 15px;
   border: 1px solid black;
