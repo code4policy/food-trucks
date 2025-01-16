@@ -144,8 +144,15 @@ h1 {
 
 .content-layout9 {
   display: grid;
+  padding-left: 100px;
   grid-template-columns: 2fr 1fr;
   gap: 20px;
+}
+
+#h3-card7 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-left: 100px;
 }
 
 .info-box {
