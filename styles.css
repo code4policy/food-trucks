@@ -196,6 +196,10 @@ h1 {
   position: relative;
 }
 
+.document-list {
+  text-align: left;
+}
+
 .task {
   display: flex;
   margin-bottom: 20px;
