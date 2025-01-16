@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
 
       .modal-content {
-          background-color: #FFFAF5;
+          background-color:rgb(255, 255, 255);
           margin: 5% auto;
           padding: 20px;
           width: 90%;
