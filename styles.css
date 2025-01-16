@@ -57,11 +57,6 @@ body {
   transform: scale(1.02);
 }
 
-
-.container {
-  margin-bottom: 20px; /* Add margin at the bottom of the content */
-}
-
 .expandable-content .close-btn {
   position: absolute;
   top: 10px;
@@ -94,11 +89,12 @@ body {
 
 .step-header {
   display: flex;
-  justify-content: center; 
+  justify-content: start; 
   align-items: center; 
   border-bottom: 1px solid black;
   padding-bottom: 10px;
   margin-bottom: 20px;
+  padding-left: 0px;
 }
 
 .title-wrapper {
@@ -111,6 +107,13 @@ body {
   height: 3px;
   background-color: #FB4D42;
   margin-top: 5px; 
+}
+
+h1 {
+  font-size: 24px;
+  font-weight: 800;
+  margin: 0;
+  text-align: left;
 }
 
 .subheading {
