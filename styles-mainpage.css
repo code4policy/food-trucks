@@ -77,17 +77,10 @@ header {
 .intro-text {
     max-width: 1172px;
     margin: 0 auto;
-    text-align: left;
+    text-align: center;
     line-height: 20px;
-    font-size: 14px;
+    font-size: 16px;
     padding: 20px;
-    font-family: 'Lora', serif;
-}
-
-strong {
-
-    font-weight: bold;
-
 }
 
 .cost-time {
