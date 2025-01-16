@@ -84,6 +84,12 @@ header {
     font-family: 'Lora', serif;
 }
 
+strong {
+
+    font-weight: bold;
+
+}
+
 .cost-time {
     font-size: 14px;
 }
