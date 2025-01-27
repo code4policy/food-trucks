@@ -207,3 +207,27 @@ footer a {
 .step-card:hover {
     transform: scale(1.02);
 }
+
+.disclaimer-banner {
+    background-color: rgba(220, 53, 69, 0.9);
+    border-bottom: 3px solid #DEE2E6;
+    padding: 12px 24px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    position: center;
+    top: 10;
+    z-index: 10;
+    opacity: .8;
+}
+
+.disclaimer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    color: white;
+    font-size: 16px;
+}
+
+.disclaimer-emphasis {
+    color: white;
+    font-weight: bold;
+}
